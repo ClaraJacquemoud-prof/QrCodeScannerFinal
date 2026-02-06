@@ -67,9 +67,13 @@ iframe{
     border: none;
 }
 
-/* #reader > div > img{
+#reader > div > img{
     display: none;
-} */
+}
+
+#reader__dashboard_section{
+    background-color: var(--couleur_bouton_scan);
+}
 
 .sticker > img{
     height: 100%;
