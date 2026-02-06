@@ -1,0 +1,100 @@
+*{
+     --duree_anim : 1s;
+     --duree_video : 8s;
+     --couleur_bouton_scan :  rgb(142, 170, 194); 
+     --hauteur_boutons : 200px
+}
+
+
+.hidden{
+    visibility: hidden;
+}
+
+html{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+   
+}
+
+body{
+    position: relative;
+    width: 375px;
+height: 100vh;
+background-color: aliceblue;
+display: flex;
+flex-direction: column;
+background-image: url('../0d44114a4544b4f84b79d2d43bd4b4d7d13cd271.jpg');
+background-size: contain;
+}
+
+#reader{
+    height: 100%;
+    width: 100% !important;
+    border: none !important;
+    z-index: 1;
+    /* background-color: black; */
+}
+
+
+iframe{
+    height: 100%;
+    width: 100%;
+    animation-name: 'myAnimation';
+    animation-delay: var(--duree_video);
+    animation-duration: var(--durée_anim);
+    animation-fill-mode: forwards;
+    position: absolute;
+  top: 0px;
+  pointer-events: none;
+}
+
+
+@keyframes myAnimation {
+  from {opacity: 1;}
+  to {opacity: 0;
+        display: none;}
+}
+
+#button, button{
+    height: var(--hauteur_boutons);
+    background-color: var(--couleur_bouton_scan);
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+/* #reader > div > img{
+    display: none;
+} */
+
+.sticker > img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.sticker{
+    position: relative;
+    height: 173px;
+    width: 80px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+
+
+
+.stickerConteneur{
+    padding: 1px 41px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
